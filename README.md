@@ -1,1 +1,1 @@
-alx zero level c programming
+This project is an intro to debuging
