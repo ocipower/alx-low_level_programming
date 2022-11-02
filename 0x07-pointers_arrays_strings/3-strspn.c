@@ -1,21 +1,31 @@
 #include "main.h"
 
 /**
-  * _strchr - searches for the first occurence of a racter
-  * @s: pointer to  buffer holding character to be sort for
-  * @c: racter to be sort for
-  * Return: returns a pointer to the racter soretd for
-  */
+ * _strspn - a function that gets the length of a prefix substring
+ *
+ * @s: the initial segment of
+ *
+ * @accept: which consist only of bytes from
+ *
+ * Return: the number of bytes
+ */
 
-#include<stdio.h>
-
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	while (*s)
+	int z = 0, x, y;
+
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		if (s[x] != 32)
+		{
+			for (y = 0; accept[y] != '\0'; y++)
+			{
+				if (s[x] == accept[y])
+					z++;
+			}
+		}
+		else
+			return (z);
 	}
-	return ('\0');
+		return (z);
 }
