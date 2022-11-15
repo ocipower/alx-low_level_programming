@@ -2,18 +2,19 @@
 #define DOG
 
 /**
-  * struct dog - dog class
-  *
-  * @name: dog's name
-  *
-  * @owner: dog owner
-  *
-  * @age: dogs age
-  */
+ * struct dog - dog class
+ *
+ * @name: Name of the dog
+ *
+ * @age: Age of the dog
+ *
+ * @owner: Owner of the dog
+ */
+
 struct dog
 {
 	char *name;
-	loat age;
+	float age;
 	char *owner;
 };
 
