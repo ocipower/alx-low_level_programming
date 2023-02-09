@@ -8,12 +8,16 @@
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int hash = 5471;
+	unsigned long int hash = 5381;
 	int ch;
 
-	while (*str++)
+	if (!str)
 	{
-		ch = *str;
+		printf("Error: null pointer\n");
+		return (0);
+	};
+	while (ch = *str++)
+	{
 		hash = ((hash << 5) + hash) + ch;
 	}
 	return (hash);
